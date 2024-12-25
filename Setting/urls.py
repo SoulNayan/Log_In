@@ -39,7 +39,7 @@ urlpatterns = [
     path('viewcategories/',viewcategories),
     path('editcategories/',editcategories),
     path('deletecategories/',deletecategories),
-
+    path('addsubcategories/',addsubcategories),
 
 
 ]

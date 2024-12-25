@@ -32,3 +32,13 @@ class CategoriesForm(ModelForm):
     class Meta:
         model = Categories
         fields = ["image","title"]
+
+class SubCategories(models.Model):
+    image = models.ImageField(upload_to='SubCategories_image/')
+    title = models.CharField(max_length=300)
+    cat_id = models.ForeignKey(Categories,on_delete=models.CASCADE)
+
+class SubCategoriesForm(ModelForm):
+    class Meta:
+        model = SubCategories
+        fields = ["image","title","cat_id"]
